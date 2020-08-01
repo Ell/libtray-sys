@@ -1,0 +1,16 @@
+[package]
+name = "libtray-sys"
+version = "0.1.0"
+links = "tray"
+build = "build.rs"
+authors = ["Ell <alan@cattes.us>"]
+edition = "2018"
+
+[dependencies]
+
+[target.'cfg(linux)'.dependencies]
+pkg-config = "0.3.18"
+
+[build-dependencies]
+bindgen = "0.54.1"
+cc = { version = "1.0", features = ["parallel"] }
