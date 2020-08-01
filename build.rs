@@ -7,7 +7,7 @@ fn main() {
 
     let mut builder = cc::Build::new();
 
-    builder.files(vec!["src/tray.h"]);
+    builder.files(vec!["src/tray.c"]);
 
     #[cfg(target_os = "windows")]
     {
